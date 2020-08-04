@@ -1,82 +1,12 @@
-# Cohorts Training Jam.py Application 
+# MS Access Asset Inventory converted to Jam.py 
 
 Welcome! 
 
-This is the Application run on Heroku for managing staff training developed with Jam.py Application Builder:
+This is the MS Access Asset Inventory (wip) converted to Web with Jam.py Application Builder:
 
-https://cohortstraining.herokuapp.com/
-
-About the App by original Author:
-
-"Administration of this is done by my team for employees.  It's not intended for employees to use themselves.  Staff are assigned to cohorts by the team as part of the **booking** process and this is done from the staff view/edit form where the staff_cohorts is a details. I have buttons that, when a staff member is selected, it opens straight to the add to cohort screen with some hacky jquery automation.
-
-The code that wasn't included from the cohorts view is that we use the multi-select and can assign specific training modules (which is another details view on staff) to some/all of the staff in a specific cohort once they have completed them as part of their classes. Also the ability to generate a list of email addresses for all of the the staff in a cohort to contact them.  The intention isn't to change cohort membership from this side.  The reason that it's done like that is initial training is over three weeks so someone may be part of a cohort but not complete all training modules.  They may then join a later cohort to complete modules they have missed."
+https://msaccess.herokuapp.com/
 
 
-
-
-To get you going with the most daunting question of database design - master-details, here is a short **how to** link the tables in Jam.py.
-
-The database has a table **staff** which has a bunch of Details views, one of which is **staff_cohorts** (training classes) which links **staff** and **cohorts** in a many-to-many relationship:
-
-![Staff](https://github.com/platipusica/Cohorts/blob/master/images/test/Auto%20Generated%20Inline%20Image%201.png)
-
-On the design of the **staff_cohorts** details table I include a lookup to **staff_number** - this will effectively be a duplicate of the value of **master_rec_id** as above (shown in red).  I also use this to then include all the things from the **staff** table (and associated tables) I want to see from my **cohorts** view of the data as lookups bound to this (shown in green)
-
-
-![Staff Cohorts](https://github.com/platipusica/Cohorts/blob/master/images/test/Auto%20Generated%20Inline%20Image%202.png)
-
-To view the code below, open the Application Builder https://cohortstraining.herokuapp.com/builder.html and navigate to Project/Task/Groups/Forms, click on "Staff" table and "Client Module", than on "Cohorts" table, etc.
-
-I hide all these extra fields from the View form and Edit forms of staff_cohorts
-
-When I open the Edit form of staff_cohorts, I programmatically set the value of the staff_number field:
-
-```
-function on_edit_form_created(item) {
-    var current_staff_id = task.staff.id.value;
-    item.staff_number.value = current_staff_id;
-}
-```
-
-On the cohorts table I don't have any details associated, instead I create the details view of the staff_cohorts using the following code:
-
-```
-function on_view_form_created(item) {
-
-    item.table_options.height -= 350;
-    item.sc = task.staff_cohorts.copy();
-}
-
-
-function on_after_scroll(item) {
-if (item.view_form.length) {
-      if (item.rec_count) {
-          item.sc.set_fields(['staff_number', 'first_name', 'surname', 'role',
-          'department', 'master_id', 'master_rec_id', 'id', 'deleted']);
-          item.sc.set_order_by(['surname']);
-          item.sc.set_where({cohort_index: item.id.value});
-          item.sc.create_table(item.view_form.find('.view-detail'), {
-              height: 300,
-              multiselect: true,
-              select_all: true,
-              summary_fields: ['staff_number'],
-          });
-          item.sc.open(true);
-      }
-      else {
-          item.sc.close();
-      }
-    }
-}
-
-
-function on_view_form_shown(item) {
-    item.refresh_page();  //fixes slightly annoying render bug
-}
-```
-
-The render bug is that the column sizing doesn't auto-correct until you first scroll, the refresh fixes that.
 
 About Jam.py Application Builder
 ------------
