@@ -6,6 +6,10 @@ This is the MS Access Asset Inventory (wip) converted to Web with Jam.py Applica
 
 https://msaccess.herokuapp.com/
 
+What we see is completely automated Application from below DB model. No additional development, however it is still in WIP.
+
+The App database design after automated conversion to Sqlite3 with ESF database migration toolkit and imported to Jam.py:
+
 ![MS Access Database](https://github.com/platipusica/AssetInventoryMSAccess/blob/master/images/MSAssetInv.png)
 
 
