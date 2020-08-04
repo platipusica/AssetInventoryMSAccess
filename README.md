@@ -35,8 +35,8 @@ https://jampy.pythonanywhere.com
 How to run the App in *your* environment?
 ------------
 
-Open https://cohortstraining.herokuapp.com/builder.html , click on Project/Export. The downloaded file will be used for below Import.
-This procedure is applicable for any of above Demo Applications.
+Open https://msaccess.herokuapp.com/builder.html , click on Project/Export. The downloaded file will be used for below Import.
+This procedure is applicable for any of the above Demo Applications.
 
 
 
