@@ -6,9 +6,8 @@ This is the MS Access Asset Inventory (wip) converted to Web with Jam.py Applica
 
 https://msaccess.herokuapp.com/
 
-What we see is completely automated Application from below DB model. No additional development, however it is still in WIP.
+What we see is a no-code Application from below DB model. No additional coding is needed, however it is still in WIP.
 
-The App database design after automated conversion to Sqlite3 with ESF database migration toolkit and imported to Jam.py:
 
 ![MS Access Database](https://github.com/platipusica/AssetInventoryMSAccess/blob/master/images/MSAssetInv.png)
 
@@ -17,19 +16,19 @@ The App database design after automated conversion to Sqlite3 with ESF database 
 About Jam.py Application Builder
 ------------
 
-Please visit for more info about the Jam.py:
+Please visit for more info about the Jam.py and MS Access migration:
 
 http://jampyapplicationbuilder.com/
 
 and more Demos:
 
-https://jampy-aliases.herokuapp.com
-
-https://redhatsatellite.herokuapp.com
-
-https://sambashares.herokuapp.com/
+https://jampyapp.pythonanywhere.com/
 
 https://jampy.pythonanywhere.com
+
+https://msaccess.pythonanywhere.com/
+
+The above link is a direct MS Acccess migration to the Web, just like this repo. With more modern CSS.
 
 
 How to run the App in *your* environment?
@@ -100,7 +99,7 @@ python server.py
 ```
 The new and empty App will run at http://localhost:8080
 
-Please visit http://jam-py.com/docs/intro/index.html for complete Getting Started Introduction and Import of above file.
+Please visit http://jam-py.com/docs/intro/index.html for complete Getting Started Introduction and Import of the above file.
 
 
 Hopefully this helps!
