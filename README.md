@@ -88,17 +88,8 @@ python server.py
 
 You'll have the Demo App running at http://localhost:8080
 
-## Create a new App from above Export file
 
-```
-mkdir newapp
-cd newapp
-jam-project.py
-python server.py
-```
-The new and empty App will run at http://localhost:8080
-
-Please visit http://jam-py.com/docs/intro/index.html for complete Getting Started Introduction and Import of the above file.
+Please visit http://jam-py.com/docs/intro/index.html for complete Getting Started Introduction.
 
 
 Hopefully this helps!
