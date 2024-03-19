@@ -2,9 +2,8 @@
 
 Welcome! 
 
-This is the MS Access Asset Inventory (wip) converted to Web with Jam.py Application Builder:
+This is the MS Access Asset Inventory (wip) converted to Web with Jam.py Application Builder
 
-https://msaccess.herokuapp.com/
 
 What we see is a no-code Application from below DB model. No additional coding is needed, however it is still in WIP.
 
@@ -34,9 +33,7 @@ The above link is a direct MS Acccess migration to the Web, just like this repo.
 How to run the App in *your* environment?
 ------------
 
-Open https://msaccess.herokuapp.com/builder.html , click on Project/Export. The downloaded file will be used for below Import.
-This procedure is applicable for any of the above Demo Applications.
-
+Clone this repo, install jam.py with pip, and run: server.py
 
 
 Jam.py Installation
