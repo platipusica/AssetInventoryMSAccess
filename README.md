@@ -35,6 +35,8 @@ How to run the App in *your* environment?
 
 Clone this repo, install jam.py with pip, and run: server.py
 
+Access the app with your browser on: http://127.0.0.1:8080
+or access the builder on: http://127.0.0.1:8080/builder.html
 
 Jam.py Installation
 ------------
